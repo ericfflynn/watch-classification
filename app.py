@@ -34,12 +34,12 @@ def main():
         image = Image.open(uploaded_file)
     else:
         default_images = [
-        './test_images/Datejust.jpg',
-        './test_images/Submariner.jpg',
-        './test_images/Gmt-Master.jpg',
-        './test_images/Daytona.jpg',
+        'Datejust.jpg',
+        'Submariner.jpg',
+        'Gmt-Master.jpg',
+        'Daytona.jpg',
         ]
-        selected_image = st.sidebar.radio("Select a default image:", default_images,format_func=lambda x: x.split('/')[2].split('.')[0])
+        selected_image = st.sidebar.radio("Select a default image:", default_images,format_func=lambda x: x.split('.')[0])
         image = Image.open(selected_image).resize((600, 400))
 
     col1, col2 = st.columns(2)
