@@ -121,8 +121,6 @@ spacy-legacy==3.0.12
 spacy-loggers==1.0.5
 srsly==2.4.8
 stack-data==0.2.0
-streamlit==1.16.0
-streamlit-aggrid==0.3.3
 sympy==1.12
 tenacity==8.1.0
 terminado==0.13.1
