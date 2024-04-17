@@ -23,8 +23,8 @@ def main():
     st.set_page_config(layout="wide")
     st.markdown("<h1 style='text-align: center; color: black;'>Rolex Watch Classifier</h1>", unsafe_allow_html=True)
     st.markdown("""
-    <h3 style='text-align: center; color: black;'>Feel free to play around with the different example photos and then try to upload your own. Even if the watch is not one of these four models, it will tell you which model is most similar!</h1>
-    <p style='text-align: center; color: black;'>Note: Certain mages may fail to upload please try again with a new image</p>
+    <h3 style='text-align: center; color: black;'>Drag and drop an image of your own in the side bar. Even if it's not one of these four models, you can see which one it is most similar to!</h1>
+    <p style='text-align: center; color: black;'>Note: Certain mages may fail to upload please try again with a new image.</p>
     """,
     unsafe_allow_html=True)
     st.write('***')
@@ -34,12 +34,12 @@ def main():
         image = Image.open(uploaded_file)
     else:
         default_images = [
-        'datejust.jpg',
-        'submariner.jpg',
-        'gmt-master.jpg',
-        'daytona.jpg',
+        './images/datejust.jpg',
+        './images/submariner.jpg',
+        './images/gmt-master.jpg',
+        './images/daytona.jpg',
         ]
-        selected_image = st.sidebar.radio("Select a default image:", default_images,format_func=lambda x: x.split('.')[0].title())
+        selected_image = st.sidebar.radio("Select a default image:", default_images,format_func=lambda x: x.split("/")[2].split('.')[0].title())
         image = Image.open(selected_image).resize((600, 400))
 
     col1, col2 = st.columns(2)
