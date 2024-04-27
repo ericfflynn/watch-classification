@@ -1,6 +1,5 @@
 import streamlit as st
 from PIL import Image
-import numpy as np
 from fastai.vision.all import *
 
 learn = load_learner('rolexes.pkl')
